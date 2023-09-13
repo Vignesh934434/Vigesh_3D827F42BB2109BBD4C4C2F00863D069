@@ -1,12 +1,12 @@
-def factorial(n):
-    # Base case: factorial of 0 is 1
-    if n == 0:
-        return 1
-    # Recursive case: factorial of n is n multiplied by factorial of (n-1)
+def is_leap_year(year):
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
     else:
-        return n * factorial(n - 1)
+        return False
 
-# Example usage:
-number = 5
-result = factorial(number)
-print(f"The factorial of {number} is {result}")
+year = int(input("Enter a year: "))
+
+if is_leap_year(year):
+    print(year, "is a leap year.")
+else:
+    print(year, "is not a leap year.")
